@@ -1,3 +1,8 @@
+provider "azurerm" {
+  features {}
+  region = "centralindia"
+}
+
 resource "azurerm_virtual_network" "example" {
   name                = "example-vnet"
   location            = "centralindia"
