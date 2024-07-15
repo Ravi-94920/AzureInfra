@@ -21,6 +21,7 @@ jobs:
         backendAzureRmStorageAccountName: 'devopsterraform'
         backendAzureRmContainerName: 'statefile'
         backendAzureRmKey: 'terraform.tfstate'
+      displayName: Terraform init
     
     - task: TerraformTaskV4@4
       inputs:
@@ -31,4 +32,10 @@ jobs:
       inputs:
         provider: 'azurerm'
         command: 'plan'
+        environmentServiceNameAzureRM: 'Az_DevOps'
+      displayName: Terrafotm plan
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
         environmentServiceNameAzureRM: 'Az_DevOps'
