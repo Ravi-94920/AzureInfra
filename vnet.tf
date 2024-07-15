@@ -1,6 +1,5 @@
 provider "azurerm" {
   features {}
-  region = "centralindia"
 }
 
 resource "azurerm_virtual_network" "example" {
