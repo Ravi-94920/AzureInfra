@@ -13,8 +13,3 @@ terraform {
     key                 = "terraform.tfstate"
   }
 }
-
-provider "azurerm" {
-  features {}
-  region = "centralindia"
-}
