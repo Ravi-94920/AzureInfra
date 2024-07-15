@@ -12,4 +12,23 @@ jobs:
       inputs:
         terraformVersion: 'latest'
       displayName: Terraform Installation
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        backendServiceArm: 'Az_DevOps'
+        backendAzureRmResourceGroupName: 'InvenicsDevOps-rg'
+        backendAzureRmStorageAccountName: 'devopsterraform'
+        backendAzureRmContainerName: 'statefile'
+        backendAzureRmKey: 'terraform.tfstate'
     
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'validate'
+      displayName: Terraform validate
+    - task: TerraformTaskV4@4
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        environmentServiceNameAzureRM: 'Az_DevOps'
