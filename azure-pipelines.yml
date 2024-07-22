@@ -39,3 +39,4 @@ jobs:
         provider: 'azurerm'
         command: 'apply'
         environmentServiceNameAzureRM: 'Az_DevOps'
+      displayName: Terraform Apply
