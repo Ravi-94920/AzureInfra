@@ -34,9 +34,9 @@ jobs:
         command: 'plan'
         environmentServiceNameAzureRM: 'Az_DevOps'
       displayName: Terrafotm plan
-    - task: TerraformTaskV4@4
-      inputs:
-        provider: 'azurerm'
-        command: 'apply'
-        environmentServiceNameAzureRM: 'Az_DevOps'
-      displayName: Terraform Apply
+    # - task: TerraformTaskV4@4
+    #   inputs:
+    #     provider: 'azurerm'
+    #     command: 'apply'
+    #     environmentServiceNameAzureRM: 'Az_DevOps'
+    #   displayName: Terraform Apply
