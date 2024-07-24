@@ -4,7 +4,6 @@ resource "azurerm_storage_account" "example" {
   location                 = "centralindia"
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  account_tier             = "Standard"
   tags = {
     Environment = "Dev"
   }
